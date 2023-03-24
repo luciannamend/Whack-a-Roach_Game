@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+html {
+    box-sizing: border-box;
+    height: 90%;
+    width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    color: white;
+    text-decoration: none;    
+}
+
+body {
+    background-image: url('/img/dirty_floor.jpg');
+    height: 100%;
+    margin-left: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.score {
+    font-size: 3em;
+	margin:10px;
+    position: relative;
+    padding: 1px 20px 1px 20px ;
+    background-color: rgba(58, 38, 7, 0.619);  
+    text-shadow: -1px 0px black, 1px 0px white;
+    color: rgb(227, 225, 223);
+	border-radius: 7px;
+    box-shadow: 0.1em 0.1em rgba(95, 79, 55, 0.588);   
+}
+
+button {
+    text-align: center;
+	margin:10px;
+    padding: 10px 10px 10px 10px ;
+    background-color: rgba(58, 38, 7, 0.851);
+    text-shadow: -1px 0px black, 1px 0px white;
+    color: rgb(214, 192, 171);
+	border-radius: 7px;
+    box-shadow: 0.1em 0.1em rgb(95, 79, 55); 
+    cursor: pointer;
+    font-size: 18pt;
+}
+
+.restartGame {    
+    text-align: center;
+	margin:10px;
+    padding: 10px 10px 10px 10px ;
+    background-color: rgba(79, 16, 16, 0.799);
+    text-shadow: -1px 0px black, 1px 0px white;
+    color: rgb(214, 192, 171);
+	border-radius: 7px;
+    box-shadow: 0.1em 0.1em rgb(95, 79, 55); 
+    cursor: pointer;
+    font-size: 20pt;
+}
+
+.gameArea {
+    background-image: url('/img/dirty_floor.jpg');
+    height: 600px;
+    width: 70%;
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 100px;
+    justify-items: center;
+    border-radius: 20%;
+}
+
+.hole {
+    width: 70px;
+    border-radius: 50%;
+    background-color: rgba(40, 29, 1, 0.237);
+    box-shadow: inset 0 5px 0 1px rgba(53, 21, 6, 0.57),
+                inset 0 14px 8px 8px rgba(0, 0, 0, 0.36),
+                0 0 5px rgba(0, 0, 0, 0.836);
+    position: relative;  
+}
+
+.roach {
+    width: 3.25rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-150%);
+    bottom: 0;    
+    animation: rise 1s ease-out;
+    cursor: crosshair;
+}
+
+@keyframes rise {
+    0%{
+        transform: translateX(0) translateY(0);
+    }
+    100%{
+        transform: translateX(-150%) translateY(0);
+    }
+}
+
+.roachDead {
+    width: 5rem;
+}
